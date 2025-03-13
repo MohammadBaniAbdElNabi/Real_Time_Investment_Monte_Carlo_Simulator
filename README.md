@@ -1,19 +1,50 @@
-# 🎈 Blank app template
+# 📊 Real-Time Investment Monte Carlo Simulator
 
-A simple Streamlit app template for you to modify!
+## 🚀 Overview
+This project is a **Streamlit-based web application** that provides real-time investment analysis using **Monte Carlo simulations**. The app fetches live stock data via **Yahoo Finance (yfinance)**, performs **statistical analysis**, and generates **visualizations** to assess portfolio performance and risk.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+## ✨ Features
+- 📡 **Real-Time Investment Data**: Fetches current stock prices and historical data.
+- 📈 **Monte Carlo Simulation**: Models future portfolio values based on historical returns.
+- 📊 **Interactive Visualizations**: Charts, heatmaps, and risk metrics.
+- ⚡ **Customizable Parameters**: Users can adjust simulations, investment horizon, and drift.
+- 📝 **Data Editing**: Modify investment data dynamically.
+- 📥 **Download Reports**: Export historical and simulated data as CSV.
 
-### How to run it on your own machine
+## 🛠️ Setup & Installation
+### 1️⃣ Install Dependencies
+Run the following command to install required libraries:
+```bash
+pip install streamlit pandas numpy seaborn matplotlib altair yfinance
+```
 
-1. Install the requirements
+### 2️⃣ Run the App
+```bash
+streamlit run streamlit_app.py
+```
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+## 📂 Project Structure
+```
+├── streamlit_app.py       # Main application script
+├── requirements.txt       # List of dependencies
+├── README.md              # Project documentation
+```
 
-2. Run the app
+## 🔧 How It Works
+1. **Fetch Data**: Retrieves stock data from Yahoo Finance.
+2. **Validate & Process Data**: Ensures correct formatting and data integrity.
+3. **Run Monte Carlo Simulation**: Generates future investment scenarios.
+4. **Visualize Results**: Displays line charts, heatmaps, and risk assessments.
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+## 🎨 User Interface
+- **Editable Portfolio Table**
+- **Dynamic Charts (Altair, Matplotlib, Seaborn)**
+- **Simulation Controls (Sliders, Buttons)**
+
+## 📌 Future Enhancements
+- 🌍 **Multi-Asset Portfolio Support**
+- 🔥 **Machine Learning-Based Forecasting**
+- 📊 **Advanced Risk Metrics (Sharpe, Sortino Ratios)**
+
+## 🤝 Contributing
+Feel free to **fork** this repository, **submit issues**, or **propose new features**! 😊
