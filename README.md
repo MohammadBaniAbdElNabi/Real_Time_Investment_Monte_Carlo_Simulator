@@ -1,50 +1,82 @@
-# 📊 Real-Time Investment Monte Carlo Simulator
+### 📘 **README: Live Investment Dashboard & Risk Analysis**  
 
-## 🚀 Overview
-This project is a **Streamlit-based web application** that provides real-time investment analysis using **Monte Carlo simulations**. The app fetches live stock data via **Yahoo Finance (yfinance)**, performs **statistical analysis**, and generates **visualizations** to assess portfolio performance and risk.
+---
 
-## ✨ Features
-- 📡 **Real-Time Investment Data**: Fetches current stock prices and historical data.
-- 📈 **Monte Carlo Simulation**: Models future portfolio values based on historical returns.
-- 📊 **Interactive Visualizations**: Charts, heatmaps, and risk metrics.
-- ⚡ **Customizable Parameters**: Users can adjust simulations, investment horizon, and drift.
-- 📝 **Data Editing**: Modify investment data dynamically.
-- 📥 **Download Reports**: Export historical and simulated data as CSV.
+## 🚀 **Overview**  
+This **Streamlit-powered dashboard** provides **real-time investment tracking, Monte Carlo simulations, and advanced risk analysis** for stock market investments. The app **fetches live stock prices** from Yahoo Finance, allows **interactive data editing**, and enables **investment risk evaluation before and after simulation**.  
 
-## 🛠️ Setup & Installation
-### 1️⃣ Install Dependencies
-Run the following command to install required libraries:
-```bash
+---
+
+## 📌 **Key Features**  
+### 🔹 **Real-Time Data Fetching**
+- Retrieves **live stock data** from Yahoo Finance (**1-year historical data**).  
+- Updates automatically at **the time of app execution** for accuracy.  
+- Allows **dynamic data editing** for portfolio customization.  
+
+### 🔹 **Investment Growth Visualization**
+- **Interactive charts** for investment trends over time.  
+- Supports **custom stock ticker inputs** (e.g., AAPL, TSLA, AMZN).  
+
+### 🔹 **Monte Carlo Simulation**
+- Simulates **future portfolio performance** based on **historical data trends**.  
+- Parameters:  
+  - **Number of simulations:** 50 to 500  
+  - **Investment horizon:** 30 to 252 days  
+  - **Expected drift:** -5% to +5%  
+- Outputs:  
+  - **Simulated portfolio growth** chart  
+  - **Heatmap visualization** of all simulations  
+
+### 🔹 **Comprehensive Risk Analysis**  
+#### **📉 Before Running the Simulation**  
+- **Sharpe Ratio** → Measures risk-adjusted returns.  
+- **Sortino Ratio** → Similar to Sharpe but penalizes downside risk only.  
+- **Maximum Drawdown (Max DD)** → Shows the largest portfolio loss from peak to bottom.  
+
+#### **📉 After Running the Simulation**  
+- **Post-simulation Sharpe Ratio** → Evaluates the risk-return balance of the simulated portfolio.  
+- **Post-simulation Sortino Ratio** → Assesses downside risk after simulation.  
+- **Post-simulation Max Drawdown** → Identifies worst-case loss scenarios in simulated investments.  
+- **Delta Metrics** → Shows the **change** in risk metrics before vs. after simulation.  
+
+### 🔹 **Downloadable Reports**
+- **Download Historical Investment Data** as CSV.  
+- **Download Simulated Portfolio Data** for further analysis.  
+
+---
+
+## 🎛 **How to Use the App**
+1️⃣ **Enter a Stock Ticker** (e.g., AAPL, TSLA, AMZN).  
+2️⃣ **Review Live Data** → Data table is editable.  
+3️⃣ **Analyze Pre-Simulation Risk Metrics** (Sharpe, Sortino, Max DD).  
+4️⃣ **Adjust Monte Carlo Simulation Settings** (simulations, horizon, drift).  
+5️⃣ **Run the Simulation** and view **updated risk metrics**.  
+6️⃣ **Download Reports** for deeper insights.  
+
+---
+
+## 📦 **Installation & Running Locally**
+### 1️⃣ **Install Dependencies**
+Ensure you have **Python 3.8+** and install required packages:  
+```sh
 pip install streamlit pandas numpy seaborn matplotlib altair yfinance
 ```
 
-### 2️⃣ Run the App
-```bash
+### 2️⃣ **Run the App**
+```sh
 streamlit run streamlit_app.py
 ```
 
-## 📂 Project Structure
-```
-├── streamlit_app.py       # Main application script
-├── requirements.txt       # List of dependencies
-├── README.md              # Project documentation
-```
+---
 
-## 🔧 How It Works
-1. **Fetch Data**: Retrieves stock data from Yahoo Finance.
-2. **Validate & Process Data**: Ensures correct formatting and data integrity.
-3. **Run Monte Carlo Simulation**: Generates future investment scenarios.
-4. **Visualize Results**: Displays line charts, heatmaps, and risk assessments.
+## 🔧 **Future Enhancements**
+🔹 **Portfolio Diversification Simulation** (multiple stocks at once)  
+🔹 **Custom Risk Tolerance Settings**  
+🔹 **Machine Learning-Based Forecasting**  
 
-## 🎨 User Interface
-- **Editable Portfolio Table**
-- **Dynamic Charts (Altair, Matplotlib, Seaborn)**
-- **Simulation Controls (Sliders, Buttons)**
+---
 
-## 📌 Future Enhancements
-- 🌍 **Multi-Asset Portfolio Support**
-- 🔥 **Machine Learning-Based Forecasting**
-- 📊 **Advanced Risk Metrics (Sharpe, Sortino Ratios)**
+## 🤝 **Contributing**
+Feel free to fork the repository and submit pull requests for improvements.  
 
-## 🤝 Contributing
-Feel free to **fork** this repository, **submit issues**, or **propose new features**! 😊
+📩 **Contact:** Let me know if you have any feature suggestions! 🚀
