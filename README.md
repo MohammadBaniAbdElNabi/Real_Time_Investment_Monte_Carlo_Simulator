@@ -1,82 +1,80 @@
-### 📘 **README: Live Investment Dashboard & Risk Analysis**  
+# 📈 Investment Risk & Simulation Dashboard  
+
+## **Overview**  
+The **Investment Risk & Simulation Dashboard** is a **Streamlit-powered web app** that fetches **real-time stock data**, allows users to **edit their portfolio dynamically**, runs **Monte Carlo simulations** to forecast investment growth, and provides a **detailed risk analysis** based on the simulations.
 
 ---
 
-## 🚀 **Overview**  
-This **Streamlit-powered dashboard** provides **real-time investment tracking, Monte Carlo simulations, and advanced risk analysis** for stock market investments. The app **fetches live stock prices** from Yahoo Finance, allows **interactive data editing**, and enables **investment risk evaluation before and after simulation**.  
+## **🚀 Features**  
+
+### **📊 Real-Time Data Fetching**
+- Retrieves **live stock data** from **Yahoo Finance** (updated every 60 seconds).  
+- Allows selection from **popular stock tickers** like **Apple (AAPL), Tesla (TSLA), Amazon (AMZN), Microsoft (MSFT), etc.**  
+- User can **manually refresh data** at any time.  
+
+### **📋 Editable Portfolio**
+- Users can **modify the portfolio** (investment amounts, returns, etc.) within the **dashboard**.  
+- Edits are **saved persistently** and **don’t disappear** after modification.  
+
+### **🔄 Monte Carlo Investment Simulation**
+- Runs **up to 500 simulations** for stock price movements.  
+- Uses **historical daily returns** to predict **future investment growth** over a selected time horizon (30 to 252 days).  
+- Allows customization of **drift (expected return bias)** to simulate different market conditions.  
+
+### **⚠️ Simplified Risk Analysis**
+- Provides **essential risk metrics** based on simulation results:  
+  ✅ **Mean Return**  
+  ✅ **Minimum & Maximum Return**  
+  ✅ **Median Return**  
+  ✅ **Worst Case (5th Percentile)**  
+  ✅ **Best Case (95th Percentile)**  
+  ✅ **Average Return**  
+
+### **📊 Data Visualization**
+- **Line charts** for investment growth over time.  
+- **Heatmaps** for simulation results (future stock value trends).  
+
+### **📥 Export Data**
+- **Downloadable** simulation data and historical stock data as **CSV files**.  
 
 ---
 
-## 📌 **Key Features**  
-### 🔹 **Real-Time Data Fetching**
-- Retrieves **live stock data** from Yahoo Finance (**1-year historical data**).  
-- Updates automatically at **the time of app execution** for accuracy.  
-- Allows **dynamic data editing** for portfolio customization.  
+## **💻 How to Run the App**  
 
-### 🔹 **Investment Growth Visualization**
-- **Interactive charts** for investment trends over time.  
-- Supports **custom stock ticker inputs** (e.g., AAPL, TSLA, AMZN).  
-
-### 🔹 **Monte Carlo Simulation**
-- Simulates **future portfolio performance** based on **historical data trends**.  
-- Parameters:  
-  - **Number of simulations:** 50 to 500  
-  - **Investment horizon:** 30 to 252 days  
-  - **Expected drift:** -5% to +5%  
-- Outputs:  
-  - **Simulated portfolio growth** chart  
-  - **Heatmap visualization** of all simulations  
-
-### 🔹 **Comprehensive Risk Analysis**  
-#### **📉 Before Running the Simulation**  
-- **Sharpe Ratio** → Measures risk-adjusted returns.  
-- **Sortino Ratio** → Similar to Sharpe but penalizes downside risk only.  
-- **Maximum Drawdown (Max DD)** → Shows the largest portfolio loss from peak to bottom.  
-
-#### **📉 After Running the Simulation**  
-- **Post-simulation Sharpe Ratio** → Evaluates the risk-return balance of the simulated portfolio.  
-- **Post-simulation Sortino Ratio** → Assesses downside risk after simulation.  
-- **Post-simulation Max Drawdown** → Identifies worst-case loss scenarios in simulated investments.  
-- **Delta Metrics** → Shows the **change** in risk metrics before vs. after simulation.  
-
-### 🔹 **Downloadable Reports**
-- **Download Historical Investment Data** as CSV.  
-- **Download Simulated Portfolio Data** for further analysis.  
-
----
-
-## 🎛 **How to Use the App**
-1️⃣ **Enter a Stock Ticker** (e.g., AAPL, TSLA, AMZN).  
-2️⃣ **Review Live Data** → Data table is editable.  
-3️⃣ **Analyze Pre-Simulation Risk Metrics** (Sharpe, Sortino, Max DD).  
-4️⃣ **Adjust Monte Carlo Simulation Settings** (simulations, horizon, drift).  
-5️⃣ **Run the Simulation** and view **updated risk metrics**.  
-6️⃣ **Download Reports** for deeper insights.  
-
----
-
-## 📦 **Installation & Running Locally**
-### 1️⃣ **Install Dependencies**
-Ensure you have **Python 3.8+** and install required packages:  
-```sh
-pip install streamlit pandas numpy seaborn matplotlib altair yfinance
+### **1️⃣ Install Dependencies**
+Make sure you have **Python 3.8+** installed. Then install required libraries:
+```bash
+pip install -r requirements.txt
 ```
 
-### 2️⃣ **Run the App**
-```sh
+### **2️⃣ Run the Streamlit App**
+```bash
 streamlit run streamlit_app.py
 ```
 
+### **3️⃣ Interact with the Dashboard**
+- Select a **stock** from the **dropdown list**.  
+- **Edit portfolio data** (investment amounts, returns, etc.).  
+- **Run Monte Carlo simulations** to see potential future outcomes.  
+- View **risk metrics** and **download results** as CSV.  
+
 ---
 
-## 🔧 **Future Enhancements**
-🔹 **Portfolio Diversification Simulation** (multiple stocks at once)  
-🔹 **Custom Risk Tolerance Settings**  
-🔹 **Machine Learning-Based Forecasting**  
+## **🛠️ Tech Stack**
+- **Python** (for data processing and modeling).  
+- **Streamlit** (for interactive UI and data visualization).  
+- **Yahoo Finance API** (for fetching live stock data).  
+- **NumPy & Pandas** (for data handling and Monte Carlo simulation).  
+- **Matplotlib & Seaborn** (for advanced visualizations).  
 
 ---
 
-## 🤝 **Contributing**
-Feel free to fork the repository and submit pull requests for improvements.  
+## **🔮 Future Improvements**
+- 🟢 Add **custom portfolio tracking** for multiple stocks.  
+- 🟢 Integrate **machine learning models** for stock return predictions.  
+- 🟢 Expand **risk analysis** to include **Sharpe Ratio & Beta Calculation**.  
 
-📩 **Contact:** Let me know if you have any feature suggestions! 🚀
+---
+
+## **📝 License**
+This project is **open-source** under the **Apache License**. Feel free to contribute! 🚀  
