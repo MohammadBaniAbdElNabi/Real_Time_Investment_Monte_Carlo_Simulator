@@ -12,16 +12,17 @@ st.set_page_config(page_title="Investment Risk & Simulation", layout="wide")
 st.sidebar.header("⚙️ Stock Selection")
 stock_options = {
     "Apple (AAPL)": "AAPL",
-    "Tesla (TSLA)": "TSLA",
-    "Amazon (AMZN)": "AMZN",
     "Microsoft (MSFT)": "MSFT",
     "Google (GOOGL)": "GOOGL",
+    "Amazon (AMZN)": "AMZN",
+    "Tesla (TSLA)": "TSLA",
     "NVIDIA (NVDA)": "NVDA",
     "Meta (META)": "META",
-    "Netflix (NFLX)": "NFLX",
-    "Disney (DIS)": "DIS",
-    "Visa (V)": "V"
+    "S&P 500 ETF (SPY)": "SPY",
+    "Bitcoin (BTC-USD)": "BTC-USD",
+    "Ethereum (ETH-USD)": "ETH-USD"
 }
+
 selected_stock_name = st.sidebar.selectbox("Select a Stock", list(stock_options.keys()))
 selected_ticker = stock_options[selected_stock_name]
 
